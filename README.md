@@ -1,3 +1,3 @@
-# Example
+# LinkGroup
 
-W1ndys-bot 的功能模块编写示例文件
+群互联模块，把某群的所有消息推送到另一个群
