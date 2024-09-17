@@ -39,6 +39,7 @@ def init_db():
             )
             conn.commit()
             conn.close()
+        logging.info(f"初始化LinkGroup数据库成功")
 
 
 # 增加监听群号
@@ -79,7 +80,7 @@ async def handle_LinkGroup_group_message(websocket, msg):
 
     # 确保数据目录存在
     os.makedirs(DATA_DIR, exist_ok=True)
-
+    init_db()
     try:
         user_id = str(msg.get("user_id"))
         group_id = str(msg.get("group_id"))
